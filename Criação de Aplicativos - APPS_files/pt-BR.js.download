@@ -1,0 +1,32 @@
+
+$(document).ready(function() {
+$(".aparecerBtn").hide();
+	$(function () {
+      	$(window).scroll(function () {
+          if ($(this).scrollTop() > 300) {
+                  $('.aparecerBtn').fadeIn();
+          } else {
+              $('.aparecerBtn').fadeOut();
+          }
+      	});
+    	$('.aparecerBtn').click(function() {
+          $('body,html').animate({scrollTop:0},600);
+    	});
+	});
+});   
+
+/*
+$(document).ready(function() {
+$(".voltarTopo, .MenuVoltarTopo").hide();
+$(function () {
+$(window).scroll(function () {
+if ($(this).scrollTop() > 300) {
+$('.voltarTopo, .MenuVoltarTopo ').fadeIn();
+} else {
+$('.voltarTopo, .MenuVoltarTopo').fadeOut();
+}
+});
+$('.voltarTopo, .MenuVoltarTopo').click(function() {
+$('body,html').animate({scrollTop:0},600);
+});
+    });});   */
